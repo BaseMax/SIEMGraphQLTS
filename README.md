@@ -100,6 +100,13 @@ Remember to authenticate and authorize your GraphQL requests using JWT tokens wh
 - Get the average severity level of security events per user.
 - Get the count of security events per event category (e.g., authentication, network).
 - Get the top N users with the most successful login attempts.
+- Get a list of all data sources.
+- Get a specific data source by ID.
+- Get a list of all rules.
+- Get a specific rule by ID.
+- Get security events for a specific data source.
+- Get security events for a specific rule.
+- Get security events for a specific user and data source.
 
 ### Mutations:
 
@@ -164,6 +171,20 @@ type SecurityEvent {
   # Add other security event fields as required.
 }
 
+type DataSource {
+  id: ID!
+  name: String!
+  description: String
+  # Add other fields relevant to the data source.
+}
+
+type Rule {
+  id: ID!
+  name: String!
+  description: String
+  # Add other fields relevant to the rule.
+}
+
 type Query {
   users: [User!]!
   securityEvents: [SecurityEvent!]!
@@ -173,6 +194,20 @@ type Query {
 
 type Mutation {
   createUser(username: String!, password: String!): User!
+
+  createDataSource(name: String!, description: String): DataSource!
+
+  updateDataSource(id: ID!, name: String!, description: String): DataSource!
+
+  deleteDataSource(id: ID!): Boolean!
+
+  createRule(name: String!, description: String): Rule!
+
+  updateRule(id: ID!, name: String!, description: String): Rule!
+
+  deleteRule(id: ID!): Boolean!
+
+  securityEventsForUserAndDataSource(userId: ID!, dataSourceId: ID!): [SecurityEvent!]!
 
   createSecurityEvent(
     timestamp: String!
