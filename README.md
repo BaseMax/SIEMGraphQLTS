@@ -27,7 +27,9 @@ The SIEM project is built using the following technologies:
 - **JWT (JSON Web Tokens)**: Used for user authentication and authorization.
 - **Docker**: Containerization for easy deployment and scalability.
 
-## MeiliSearch
+## Extra Databases
+
+### MeiliSearch
 
 Using MeiliSearch for storing logs and searching offers several advantages that make it an excellent choice for implementing a SIEM system:
 
@@ -41,6 +43,23 @@ Using MeiliSearch for storing logs and searching offers several advantages that 
 - **Open-Source and Community-Driven**: MeiliSearch is open-source software, with an active community of contributors and users. It benefits from continuous improvements, bug fixes, and feature enhancements driven by the community. This ensures that the SIEM system can take advantage of the latest advancements in MeiliSearch.
 - **Security**: MeiliSearch provides security features to protect sensitive log data. It supports HTTP(S) authentication and can be deployed within a private network to control access to the search engine.
 - **Documentation and Support**: MeiliSearch has comprehensive documentation and community support. This makes it easier for developers and system administrators to understand its capabilities, troubleshoot issues, and optimize its performance for the SIEM system.
+
+### ClickHouse
+
+Using ClickHouse in a SIEM system offers several compelling reasons that make it a valuable addition to the infrastructure:
+
+- **High Performance and Scalability**: ClickHouse is designed for high-performance analytics and data processing. It can handle massive volumes of data and perform complex analytical queries efficiently. In a SIEM system, which deals with large-scale log data and requires real-time analytics, ClickHouse's performance and scalability are crucial.
+- **Columnar Storage**: ClickHouse utilizes a columnar storage format, which is particularly suitable for analytical workloads. This storage format allows for efficient compression and selective data retrieval, optimizing query performance for analytical operations often performed in SIEM systems.
+- **Real-Time Analytics**: ClickHouse can support real-time analytics due to its ability to perform incremental data inserts and merges. This is especially important in a SIEM system, where the analysis of security events must happen in near real-time to identify and respond to threats promptly.
+- **Horizontal Scalability**: ClickHouse can be easily scaled horizontally by adding more nodes to the cluster. This ensures that the SIEM system can handle increasing data volumes without sacrificing performance or reliability.
+- **Cost-Effective Storage**: ClickHouse's efficient storage format reduces disk space requirements, making it a cost-effective solution for storing large amounts of log data. As a result, SIEM systems can keep historical logs without incurring excessive storage costs.
+- **Complex Query Support**: ClickHouse is capable of handling complex analytical queries, including aggregations, joins, and subqueries. This is valuable in a SIEM system, where data correlation and analysis across multiple log sources are common.
+- **Real-Time Replication**: ClickHouse supports replication and high availability. This ensures that data is not lost in case of hardware failures and provides continuous access to analytical capabilities even during node outages.
+- **Integration with Existing Tools**: ClickHouse offers various integrations and connectors, enabling seamless data ingestion from different data sources. It can be easily integrated into existing SIEM infrastructures, making it an attractive choice for enhancing analytics capabilities.
+- **SQL Compatibility**: ClickHouse supports SQL, which is a familiar query language for many developers and analysts. This allows teams to leverage their existing SQL skills and knowledge to work with ClickHouse effectively.
+- **Community and Ecosystem**: ClickHouse has an active and growing community that contributes to the development and improvement of the system. Additionally, various tools and libraries are available to enhance ClickHouse's functionality and ease of use within the SIEM system.
+
+In conclusion, ClickHouse's high performance, scalability, columnar storage, and real-time analytics capabilities make it a compelling choice for storing and analyzing log data in a SIEM system. Its ability to handle complex queries, cost-effective storage, and integration options further solidify its position as an excellent data warehousing solution for enhancing SIEM analytics and incident response.
 
 ## Getting Started
 
