@@ -27,6 +27,21 @@ The SIEM project is built using the following technologies:
 - **JWT (JSON Web Tokens)**: Used for user authentication and authorization.
 - **Docker**: Containerization for easy deployment and scalability.
 
+## MeiliSearch
+
+Using MeiliSearch for storing logs and searching offers several advantages that make it an excellent choice for implementing a SIEM system:
+
+- **Full-Text Search**: MeiliSearch provides fast and accurate full-text search capabilities. In a SIEM system, the ability to quickly search through logs is crucial for identifying security events and potential threats. MeiliSearch's powerful indexing and ranking algorithms ensure that search queries return relevant results efficiently.
+- **Real-Time Indexing**: MeiliSearch is designed for real-time indexing and searching. As new logs are generated and stored in the system, MeiliSearch can instantly index them, making them available for searches immediately. This real-time capability is essential in a SIEM system where timely detection and response to security incidents are vital.
+- **Scalability**: MeiliSearch is scalable, allowing the SIEM system to handle a large volume of logs effectively. As the amount of log data grows, MeiliSearch can scale horizontally to accommodate the increased load, ensuring the system's performance remains consistent.
+- **Easy Integration**: MeiliSearch offers a straightforward API and SDKs for various programming languages, making it easy to integrate with the SIEM system's existing architecture. It simplifies the development process and reduces the effort required to implement the search functionality.
+- **Customizable Ranking**: MeiliSearch allows customization of search result ranking. In a SIEM system, certain logs may be more critical than others. MeiliSearch enables the implementation of custom ranking algorithms that prioritize logs based on relevance, severity, or other criteria.
+- **Typo-Tolerance and Synonyms**: MeiliSearch includes built-in support for typo-tolerance and synonyms. In a SIEM system, logs may contain typographical errors or variations in keywords. MeiliSearch's ability to handle such variations ensures that search queries are robust and produce accurate results.
+- **Filtering and Faceting**: MeiliSearch supports filtering and faceting, allowing users to narrow down search results based on specific attributes or categories. This feature is valuable in a SIEM system to analyze logs by various criteria, such as source IP, destination IP, event type, severity, etc.
+- **Open-Source and Community-Driven**: MeiliSearch is open-source software, with an active community of contributors and users. It benefits from continuous improvements, bug fixes, and feature enhancements driven by the community. This ensures that the SIEM system can take advantage of the latest advancements in MeiliSearch.
+- **Security**: MeiliSearch provides security features to protect sensitive log data. It supports HTTP(S) authentication and can be deployed within a private network to control access to the search engine.
+- **Documentation and Support**: MeiliSearch has comprehensive documentation and community support. This makes it easier for developers and system administrators to understand its capabilities, troubleshoot issues, and optimize its performance for the SIEM system.
+
 ## Getting Started
 
 To get started with the SIEM project, follow these steps:
