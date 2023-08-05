@@ -61,6 +61,54 @@ query {
 
 Remember to authenticate and authorize your GraphQL requests using JWT tokens when required.
 
+## GraphQL
+
+### Queries:
+
+- Get a list of all security events.
+- Get a specific security event by ID.
+- Get the total count of security events.
+- Get security events within a specified time range.
+- Get security events by source IP address.
+- Get security events by destination IP address.
+- Get security events by event type (e.g., login, intrusion attempt).
+- Get security events by severity (e.g., low, medium, high).
+- Get security events sorted by timestamp in ascending order.
+- Get security events sorted by severity in descending order.
+- Get security events associated with a specific user.
+- Get security events from a specific data source (e.g., firewall, antivirus).
+- Get security events that match a specific keyword or pattern.
+- Get the top N most frequent security events.
+- Get the count of security events grouped by event type.
+- Get the count of security events grouped by severity.
+- Get the count of security events per data source.
+- Get the count of security events per user.
+- Get the count of security events per IP address.
+- Get the count of security events per hour.
+
+### Mutations:
+
+- Create a new security event with specified attributes.
+- Update the details of an existing security event.
+- Delete a security event by ID.
+- Add a new data source to the SIEM system.
+- Update the settings of a data source.
+- Remove a data source from the SIEM system.
+- Create a new user account with authentication credentials.
+- Update the details of an existing user account.
+- Delete a user account by ID.
+- Change the password for a user account.
+- Assign a role to a user (e.g., admin, analyst, auditor).
+- Revoke a role from a user.
+- Add a new security rule for event correlation.
+- Update the settings of an existing security rule.
+- Remove a security rule from the SIEM system.
+- Enable or disable real-time event monitoring.
+- Subscribe to real-time security event notifications.
+- Unsubscribe from real-time security event notifications.
+- Acknowledge an alert for a security event.
+- Dismiss an alert for a security event.
+
 ## Contributing
 
 Contributions to the SIEM project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. Please ensure that you follow the project's coding standards and guidelines.
