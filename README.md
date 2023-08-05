@@ -57,7 +57,7 @@ To get started with the SIEM project, follow these steps:
 
 ## Usage
 
-Once the server is running, you can interact with the SIEM system using GraphQL queries and mutations. Refer to the API documentation or explore the GraphQL playground (usually available at http://localhost:3000/graphql) to understand the available queries and mutations.
+Once the server is running, you can interact with the SIEM system using GraphQL queries and mutations. Refer to the API documentation or explore the GraphQL playground (usually available at `http://localhost:3000/graphql`) to understand the available queries and mutations.
 
 Here's a simple example of a GraphQL query:
 
