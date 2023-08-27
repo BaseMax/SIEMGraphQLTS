@@ -2,6 +2,18 @@ import { ObjectType, Field, Int } from '@nestjs/graphql';
 
 @ObjectType()
 export class Rule {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field(() => Int)
+  id: number;
+
+  @Field(() => String)
+  condition: string;
+
+  @Field(() => String)
+  name: string;
+
+  @Field(() => String)
+  actions: string;
+
+  @Field(() => String)
+  description: string;
 }

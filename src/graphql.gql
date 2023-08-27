@@ -43,8 +43,11 @@ type CountSecurityEvents {
 }
 
 type Rule {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: Int!
+  condition: String!
+  name: String!
+  actions: String!
+  description: String!
 }
 
 type DataSource {
