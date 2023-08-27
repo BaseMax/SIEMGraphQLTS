@@ -48,14 +48,16 @@ export class SecurityEventsMutationsResolver {
   ) {
     createSecurityEventInput.timestamp = new Date().toISOString();
 
-    const event = await this.securityEventsService.create(
+    const { id, result } = await this.securityEventsService.create(
       createSecurityEventInput,
     );
 
-    if (event === 'created') {
+    if (result === 'created') {
       this.pubsub.publish('newSecurityEvent', {
-        newSecurityEvent: createSecurityEventInput,
+        newSecurityEvent: { id, ...createSecurityEventInput },
       });
+
+      createSecurityEventInput.id = id;
 
       this.eventEmitter.emitAsync('event.created', {
         createSecurityEventInput,

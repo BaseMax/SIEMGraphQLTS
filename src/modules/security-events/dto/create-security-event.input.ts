@@ -1,4 +1,4 @@
-import { Field, InputType } from '@nestjs/graphql';
+import { Field, InputType, Int } from '@nestjs/graphql';
 import { Severity } from '../types/severity.enum';
 
 @InputType()
@@ -26,4 +26,7 @@ export class CreateSecurityEventInput {
 
   @Field()
   user: string;
+
+  @Field(() => String, { nullable: true })
+  id?: string;
 }

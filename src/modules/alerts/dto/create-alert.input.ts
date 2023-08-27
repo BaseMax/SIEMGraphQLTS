@@ -9,5 +9,5 @@ export class CreateAlertInput {
   dismissed: boolean;
 
   @Field()
-  eventId: string;
+  id: string;
 }

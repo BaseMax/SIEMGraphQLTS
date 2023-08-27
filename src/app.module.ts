@@ -53,15 +53,5 @@ import { RolesGuard } from './common/guards/roles.guard';
     MailModule,
     UserGroupModule,
   ],
-  providers: [
-    {
-      provide: APP_GUARD,
-      useClass: GqlAuthGuard,
-    },
-    {
-      provide: APP_GUARD,
-      useClass: RolesGuard,
-    },
-  ],
 })
 export class AppModule {}

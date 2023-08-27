@@ -189,6 +189,7 @@ input CreateSecurityEventInput {
   sourceIP: String!
   timestamp: String
   user: String!
+  id: String
 }
 
 input UpdateSecurityEventInput {
@@ -234,7 +235,7 @@ input UpdateDataSourceInput {
 input CreateAlertInput {
   acknowledged: Boolean!
   dismissed: Boolean!
-  eventId: String!
+  id: String!
 }
 
 input CreateUserGroupInput {

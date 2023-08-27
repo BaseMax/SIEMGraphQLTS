@@ -19,7 +19,7 @@ export class SearchService {
     });
 
     const result = body.result;
-    return result;
+    return { id: body._id, result };
   }
 
   async count(query: any) {

@@ -54,5 +54,5 @@ model Alert {
   id           Int     @id @default(autoincrement())
   acknowledged Boolean @default(false)
   dismissed    Boolean @default(false)
-  eventId      String
+  eventId      String?
 }

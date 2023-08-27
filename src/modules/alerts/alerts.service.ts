@@ -21,7 +21,7 @@ export class AlertsService {
       data: {
         acknowledged: payload.acknowledged,
         dismissed: payload.dismissed,
-        eventId: payload.eventId,
+        eventId: payload?.id,
       },
     });
 
