@@ -4,25 +4,25 @@ Welcome to the SIEM (Security Information and Event Management) GraphQL-based pr
 
 ## Screens
 #### real-time event monitoring
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/ezgif-5-c8c7e5d4f1.gif)
 
 #### pub/sub communication and real-time with redis
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/Screenshot%20from%202023-08-27%2018-39-16.png)
 
 #### get all security events
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/Screenshot%20from%202023-08-16%2011-05-07.png)
 
 #### login user
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/Screenshot%20from%202023-08-27%2018-12-46.png)
 
 #### get security events by source IP address
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/Screenshot%20from%202023-08-16%2011-05-44.png)
 
 #### get security events by severity
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/Screenshot%20from%202023-08-16%2012-28-54.png)
 
 ####  get security events for a specific data source within a time range
-![]()
+![](https://github.com/BaseMax/SIEMGraphQLTS/blob/main/screenshots/Screenshot%20from%202023-08-23%2011-58-29.png)
 
 ## Features
 
