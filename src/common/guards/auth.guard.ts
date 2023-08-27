@@ -1,6 +1,5 @@
 import {
   ExecutionContext,
-  HttpException,
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -20,19 +19,19 @@ export class GqlAuthGuard extends AuthGuard('jwt') {
       context.getHandler(),
     );
     if (isPublic) {
-      return true;
+      return true; // Allow access to public endpoints without authentication
     }
 
     return super.canActivate(context);
   }
 
-  getRequest(context: ExecutionContext): any {
+  getRequest(context: ExecutionContext) {
     const ctx = GqlExecutionContext.create(context);
     return ctx.getContext().req;
   }
 
   handleRequest(err: any, user: any, info: any) {
-    if (err || info) throw new HttpException('Invalid Token!', 498);
+    if (err || info) throw new UnauthorizedException('Invalid Token!');
 
     if (!user) throw new UnauthorizedException('Access Denied.');
 
