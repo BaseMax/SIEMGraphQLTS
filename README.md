@@ -116,6 +116,10 @@ Before running the project, you need to configure the following settings in the 
 
 - `JWT_SECRET_KEY`: Set this to a secure secret key for your application.
 
+- `REDIS_HOST`: this redis connection host.
+
+- `REDIS_PORT`: this redis connection port.
+
 - `MAIL_HOST`: The hostname or IP address of the mail server.
 
 - `MAIL_PORT`: The port number for the mail server.
