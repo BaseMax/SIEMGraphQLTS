@@ -65,7 +65,9 @@ export class SearchService {
       const event = await this.elastic.update<CreateSecurityEventInput, Partial<CreateSecurityEventInput>>({
         index: this.index,
         id,
-        body: updateData,
+        body: {
+          doc: updateData,
+        },
       });
 
       return event.result;
