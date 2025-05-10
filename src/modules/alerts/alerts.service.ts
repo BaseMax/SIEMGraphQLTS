@@ -4,6 +4,7 @@ import { PrismaService } from '../prisma/prisma.service';
 import { OnEvent } from '@nestjs/event-emitter';
 import { MailService } from '../mail/mail.service';
 import { PubSub } from 'graphql-subscriptions';
+import { User } from '@prisma/client';
 
 @Injectable()
 export class AlertsService {
@@ -30,9 +31,17 @@ export class AlertsService {
       select: { email: true },
     });
 
-    mails.forEach(async (to) => {
-      await this.mailService.send(to.email, payload);
+    mails.forEach(async (to: User) => {
+      const payloadString = JSON.stringify(payload);
+      await this.mailService.send(to.email, payloadString);
     });
+    // mails.forEach(async (to: { email: string }) => {
+    //   const payloadString = JSON.stringify(payload);
+    //   await this.mailService.send(to.email, payloadString);
+    // });
+    // mails.forEach(async (to) => {
+    //   await this.mailService.send(to.email, payload);
+    // });
   }
 
   findAll() {
