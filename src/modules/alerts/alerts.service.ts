@@ -35,13 +35,6 @@ export class AlertsService {
       const payloadString = JSON.stringify(payload);
       await this.mailService.send(to.email, payloadString);
     });
-    // mails.forEach(async (to: { email: string }) => {
-    //   const payloadString = JSON.stringify(payload);
-    //   await this.mailService.send(to.email, payloadString);
-    // });
-    // mails.forEach(async (to) => {
-    //   await this.mailService.send(to.email, payload);
-    // });
   }
 
   findAll() {

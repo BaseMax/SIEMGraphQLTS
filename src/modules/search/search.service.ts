@@ -13,7 +13,7 @@ export class SearchService {
   async indexEvents(createSecurityEvent: CreateSecurityEventInput) {
     const body = await this.elastic.index({
       index: this.index,
-      body: {
+      document: {
         ...createSecurityEvent,
       },
     });
@@ -60,12 +60,12 @@ export class SearchService {
 
   async update(data: UpdateSecurityEventInput) {
     try {
-      const event = await this.elastic.update({
+      const { id, ...updateData } = data;
+
+      const event = await this.elastic.update<CreateSecurityEventInput, Partial<CreateSecurityEventInput>>({
         index: this.index,
-        id: data.id,
-        body: {
-          doc: data,
-        },
+        id,
+        body: updateData,
       });
 
       return event.result;
