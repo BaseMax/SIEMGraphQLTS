@@ -8,6 +8,10 @@ services:
       - .env
     ports:
       - "3000:3000"
+    command: sh -c "
+      until nc -z postgres 5432; do sleep 1; done &&
+      bunx prisma db push &&
+      bun start"
     depends_on:
       - elasticsearch
       - postgres

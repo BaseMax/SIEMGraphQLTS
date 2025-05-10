@@ -12,8 +12,4 @@ COPY . .
 
 RUN bun run prisma:generate
 
-RUN bunx prisma db push
-
 RUN bun run build
-
-CMD ["bun", "start"]
