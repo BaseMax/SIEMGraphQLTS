@@ -31,7 +31,7 @@
     "@nestjs/core": "^11.1.0",
     "@nestjs/elasticsearch": "^11.1.0",
     "@nestjs/event-emitter": "^3.0.1",
-    "@nestjs/graphql": "^13.1.0",
+    "@nestjs/graphql": "^13.2.4",
     "@nestjs/jwt": "^11.0.0",
     "@nestjs/mapped-types": "^2.1.0",
     "@nestjs/passport": "^11.0.5",
