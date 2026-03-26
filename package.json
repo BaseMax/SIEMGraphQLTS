@@ -24,9 +24,9 @@
     "schema": "src/database/schema.prisma"
   },
   "dependencies": {
-    "@apollo/server": "^4.13.0",
+    "@apollo/server": "^5.5.0",
     "@nestjs-modules/mailer": "^2.3.0",
-    "@nestjs/apollo": "^13.1.0",
+    "@nestjs/apollo": "^13.2.4",
     "@nestjs/common": "^11.1.0",
     "@nestjs/core": "^11.1.0",
     "@nestjs/elasticsearch": "^11.1.0",
