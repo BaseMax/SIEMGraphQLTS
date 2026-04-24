@@ -27,7 +27,7 @@
     "@apollo/server": "^5.5.0",
     "@nestjs-modules/mailer": "^2.3.0",
     "@nestjs/apollo": "^13.2.4",
-    "@nestjs/common": "^11.1.0",
+    "@nestjs/common": "^11.1.19",
     "@nestjs/core": "^11.1.18",
     "@nestjs/elasticsearch": "^11.1.0",
     "@nestjs/event-emitter": "^3.0.1",
